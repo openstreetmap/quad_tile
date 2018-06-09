@@ -135,7 +135,7 @@ static VALUE iterate_tiles_for_area(VALUE self, VALUE bbox)
    return Qnil;
 }
 
-void Init_quad_tile_so(void)
+void Init_quad_tile(void)
 {
    VALUE m = rb_define_module("QuadTile");
 
