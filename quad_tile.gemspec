@@ -22,9 +22,10 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  spec.files         = %w[README.rdoc] +
+                        Dir.glob("ext/**/*.{c,rb}") +
+                        Dir.glob("lib/**/*.rb") +
+                        Dir.glob("test/**/*")
   spec.extensions    = "ext/quad_tile/extconf.rb"
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }

@@ -15,5 +15,5 @@ end
 spec = Gem::Specification.load("quad_tile.gemspec")
 
 Rake::ExtensionTask.new "quad_tile", spec do |ext|
-  ext.lib_dir = "lib/quad_tile/"
+  ext.lib_dir = "lib/quad_tile"
 end
