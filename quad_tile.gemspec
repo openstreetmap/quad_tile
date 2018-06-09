@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = %w[README.rdoc] +
+  spec.files         = %w[README.md] +
                         Dir.glob("ext/**/*.{c,rb}") +
                         Dir.glob("lib/**/*.rb") +
                         Dir.glob("test/**/*")
