@@ -6,10 +6,10 @@ require "quad_tile/version"
 Gem::Specification.new do |spec|
   spec.name          = "quad_tile"
   spec.version       = QuadTile::VERSION
-  spec.authors       = ["Benjamin Reynolds"]
-  spec.email         = ["breyno127@gmail.com"]
+  spec.authors       = ["Benjamin Reynolds", "Tom Hughes"]
+  spec.email         = ["breyno127@gmail.com", "tom@compton.nu"]
 
-  spec.summary       = "native implementation of osm quad_tile function"
+  spec.summary       = "native implementation of osm quad_tile functions"
   spec.homepage      = "https://github.com/rubyforgood/quad_tile"
   spec.license       = "GPLv2"
 
