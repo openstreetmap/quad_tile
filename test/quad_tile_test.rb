@@ -57,4 +57,26 @@ class QuadTileTest < Minitest::Test
                   1610612744, 1610612745, 1610612748, 1610612749],
                  QuadTile.tiles_for_area(BoundingBox.new(-90.01, 0.0, -89.99, 0.01))
   end
+
+  def test_sql_for_area
+    assert_equal "( tile BETWEEN 3493906992 AND 3493907007 OR tile BETWEEN 3493907040 AND 3493907055 )",
+                 QuadTile.sql_for_area(BoundingBox.new(0.99, 50.99, 1.01, 51.01), "")
+    assert_equal "( tile BETWEEN 3493908067 AND 3493908071 OR tile BETWEEN 3493908075 AND 3493908095"\
+                 " OR tile IN (3493908065,3493908073,3493908256,3493908258,3493908264,3493908266) )",
+                 QuadTile.sql_for_area(BoundingBox.new(0.99, 51.09, 1.01, 51.11), "")
+    assert_equal "( tile BETWEEN 3493913707 AND 3493913711 OR tile BETWEEN 3493913720 AND 3493913727"\
+                 " OR tile BETWEEN 3493913795 AND 3493913799 OR tile BETWEEN 3493913804 AND 3493913805"\
+                 " OR tile BETWEEN 3493913808 AND 3493913817 OR tile BETWEEN 3493913820 AND 3493913821"\
+                 " OR tile IN (3493913705,3493913793,3493913801,3493913896,3493913898,3493913984,3493913986,3493913992) )",
+                 QuadTile.sql_for_area(BoundingBox.new(1.09, 51.09, 1.11, 51.11), "")
+    assert_equal "( tile BETWEEN 3509256924 AND 3509256927 OR tile BETWEEN 3509256948 AND 3509256951"\
+                 " OR tile BETWEEN 3509256956 AND 3509256957 OR tile BETWEEN 3509257096 AND 3509257103"\
+                 " OR tile BETWEEN 3509257112 AND 3509257115 OR tile BETWEEN 3509257120 AND 3509257129"\
+                 " OR tile BETWEEN 3509257132 AND 3509257133 OR tile BETWEEN 3509257136 AND 3509257139"\
+                 " OR tile BETWEEN 3509257144 AND 3509257145 )",
+                 QuadTile.sql_for_area(BoundingBox.new(9.99, -123.01, 10.01, -122.99), "")
+    assert_equal "( tile BETWEEN 1252698792 AND 1252698799 OR tile BETWEEN 1610612736 AND 1610612745"\
+                 "OR tile BETWEEN 1610612748 AND 1610612749 )",
+                 QuadTile.sql_for_area(BoundingBox.new(-90.01, 0.0, -89.99, 0.01), "")
+  end
 end
