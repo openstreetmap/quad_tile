@@ -9,6 +9,7 @@
 /tmp/
 Makefile
 *.bundle
+*.so
 
 # rspec failure tracking
 .rspec_status
