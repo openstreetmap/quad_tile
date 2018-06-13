@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = "GPL-2.0"
 
   spec.files         = %w[README.md] +
-                        Dir.glob("ext/**/*.{c,rb}") +
+                        Dir.glob("ext/**/*.{c,h,rb}") +
                         Dir.glob("lib/**/*.rb") +
                         Dir.glob("test/**/*")
   spec.extensions    = "ext/quad_tile/extconf.rb"
