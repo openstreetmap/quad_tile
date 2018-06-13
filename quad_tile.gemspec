@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "native implementation of osm quad_tile functions"
   spec.homepage      = "https://github.com/rubyforgood/quad_tile"
-  spec.license       = "GPLv2"
+  spec.license       = "GPL-2.0"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
