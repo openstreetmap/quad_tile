@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["breyno127@gmail.com", "tom@compton.nu"]
 
   spec.summary       = "native implementation of osm quad_tile functions"
-  spec.homepage      = "https://github.com/rubyforgood/quad_tile"
+  spec.homepage      = "https://github.com/openstreetmap/quad_tile"
   spec.license       = "GPL-2.0"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
