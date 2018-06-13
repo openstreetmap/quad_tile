@@ -76,7 +76,7 @@ class QuadTileTest < Minitest::Test
                  " OR tile BETWEEN 3509257144 AND 3509257145 )",
                  QuadTile.sql_for_area(BoundingBox.new(9.99, -123.01, 10.01, -122.99), "")
     assert_equal "( tile BETWEEN 1252698792 AND 1252698799 OR tile BETWEEN 1610612736 AND 1610612745"\
-                 "OR tile BETWEEN 1610612748 AND 1610612749 )",
+                 " OR tile BETWEEN 1610612748 AND 1610612749 )",
                  QuadTile.sql_for_area(BoundingBox.new(-90.01, 0.0, -89.99, 0.01), "")
   end
 end
