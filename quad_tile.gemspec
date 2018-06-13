@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Benjamin Reynolds", "Tom Hughes"]
   spec.email         = ["breyno127@gmail.com", "tom@compton.nu"]
 
-  spec.summary       = "native implementation of osm quad_tile functions"
+  spec.summary       = "Native implementation of OpenStreetMap quad tile functions"
   spec.homepage      = "https://github.com/openstreetmap/quad_tile"
   spec.license       = "GPL-2.0"
 
